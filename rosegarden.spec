@@ -3,7 +3,7 @@
 %define svn	10693
 %define rel	0.%upstream_version.%svn.3
 
-Name: rosegarden4
+Name: rosegarden
 Version: 1.9
 Release: %mkrel %rel
 Summary: Midi, audio and notation editor
@@ -36,6 +36,7 @@ Requires: libsndfile-progs
 Requires: libsamplerate-progs
 Requires: xterm
 Suggests: lilypond
+Obsoletes:  %{name}4
 BuildRoot: 	%{_tmppath}/%{name}-buildroot
 
 %description
