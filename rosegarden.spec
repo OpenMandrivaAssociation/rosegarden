@@ -1,7 +1,7 @@
 %define upstream_name	rosegarden
 %define upstream_version 10.02
-%define svn	10693
-%define rel	0.%upstream_version.%svn.3
+%define svn	11081
+%define rel	0.%upstream_version.%svn.1
 
 Name: rosegarden
 Version: 1.9
@@ -9,9 +9,8 @@ Release: %mkrel %rel
 Summary: Midi, audio and notation editor
 URL: http://www.rosegardenmusic.com/
 Source0: %{upstream_name}-svn%{svn}.tar.bz2
-Patch0:  %{upstream_name}-1.9-fix-str-fmt.patch
-Patch1:  %{upstream_name}-1.9-fix-include.patch
-Patch2:  %{upstream_name}-1.9-fix-search-path.patch
+Patch0:  %{upstream_name}-1.9-fix-include.patch
+Patch1:  %{upstream_name}-1.9-fix-search-path.patch
 License: GPLv2+
 Group: Sound
 BuildRequires: kdelibs4-devel
@@ -58,7 +57,6 @@ application for Unix and Linux
 %setup -q -n %{upstream_name}
 %patch0 -p0
 %patch1 -p0
-%patch2 -p0
 
 %build
 #generate configure
