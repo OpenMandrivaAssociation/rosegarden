@@ -1,6 +1,6 @@
 %define upstream_name	rosegarden
 %define upstream_version 10.02
-%define svn	11081
+%define svn	11505
 %define rel	0.%upstream_version.%svn.1
 
 Name: rosegarden
@@ -46,7 +46,6 @@ application for Unix and Linux
 %files -n %name -f %{name}.lang
 %defattr(-,root,root)
 %_bindir/%{upstream_name}
-%_bindir/%{upstream_name}-audiofile-importer
 %_datadir/applications/%{upstream_name}.desktop
 %_datadir/icons/*/*/*/*%{upstream_name}*
 %_datadir/mime/*
