@@ -1,4 +1,4 @@
-%define	rel			1
+%define	rel 2
 
 Name:		rosegarden
 Version:	10.02.1
@@ -26,7 +26,7 @@ BuildRequires:	libxft-devel
 BuildRequires:	alsa-lib-devel
 BuildRequires:	liblirc-devel
 Requires:	flac
-Requires: libsndfile-progs
+Requires:	libsndfile-progs
 # For sndfile-resample, see https://bugzilla.novell.com/show_bug.cgi?id=443543
 # - AdamW 2008/12
 Requires:	libsamplerate-progs
@@ -43,6 +43,7 @@ application for Unix and Linux
 %files -n %name -f %{name}.lang
 %defattr(-,root,root)
 %_bindir/%{name}
+%{_datadir}/%{name}
 %_datadir/applications/%{name}.desktop
 %_datadir/icons/*/*/*/*%{name}*
 %_datadir/mime/*
@@ -56,7 +57,7 @@ application for Unix and Linux
 
 %build
 #generate configure
-sh bootstrap.sh
+#sh bootstrap.sh
 export QTLIBDIR=%{_libdir}
 %configure2_5x
 %make
@@ -64,6 +65,22 @@ export QTLIBDIR=%{_libdir}
 %install
 rm -fr %buildroot
 %makeinstall_std
+
+mkdir -p %{buildroot}%{_datadir}/%{name}
+cp -pr scripts %{buildroot}%{_datadir}/%{name}
+cp -pr \
+	data/autoload \
+	data/chords \
+	data/examples \
+	data/fonts \
+	data/library \
+	data/pixmaps \
+	data/presets \
+	data/profile \
+	data/styles \
+	data/templates \
+		%{buildroot}%{_datadir}/%{name}
+
 %find_lang %{name} --with-html
 
 %clean
