@@ -1,15 +1,15 @@
-%define	rel 2
+%define	rel 3
 
 Name:		rosegarden
 Version:	10.02.1
 Release:	%mkrel %rel
-Summary: 	Midi, audio and notation editor
+Summary:	Midi, audio and notation editor
 URL: 		http://www.rosegardenmusic.com/
 Source0: 	http://sourceforge.net/projects/rosegarden/files/%{name}/%{version}/%{name}-%{version}.tar.bz2
-Patch0:  	%{name}-1.9-fix-include.patch
-Patch1:  	%{name}-1.9-fix-search-path.patch
-License: 	GPLv2+
-Group: 		Sound
+Patch0:		%{name}-1.9-fix-include.patch
+Patch1:		%{name}-1.9-fix-search-path.patch
+License:	GPLv2+
+Group:		Sound
 BuildRequires:	kdelibs4-devel
 BuildRequires:	jackit-devel
 BuildRequires:	ladspa-devel
@@ -66,8 +66,8 @@ export QTLIBDIR=%{_libdir}
 rm -fr %buildroot
 %makeinstall_std
 
+# isntall some extra files
 mkdir -p %{buildroot}%{_datadir}/%{name}
-cp -pr scripts %{buildroot}%{_datadir}/%{name}
 cp -pr \
 	data/autoload \
 	data/chords \
