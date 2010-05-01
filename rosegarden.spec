@@ -1,7 +1,7 @@
-%define rel 3
+%define rel 1
 
 Name:           rosegarden
-Version:        10.02.1
+Version:        10.04
 Release:        %mkrel %rel
 Summary:        Midi, audio and notation editor
 URL:            http://www.rosegardenmusic.com/
@@ -58,7 +58,7 @@ application for Unix and Linux
 %build
 #generate configure
 #sh bootstrap.sh
-export QTLIBDIR=%{_libdir}
+export QTDIR=/usr/lib/qt4
 %configure2_5x
 %make
 
