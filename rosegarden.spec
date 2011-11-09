@@ -1,7 +1,7 @@
 %define rel 1
 
 Name:           rosegarden
-Version:        11.02
+Version:        11.11.1
 Release:        %mkrel %rel
 Summary:        Midi, audio and notation editor
 URL:            http://www.rosegardenmusic.com/
