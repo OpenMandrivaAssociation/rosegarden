@@ -1,0 +1,24 @@
+Index: src/sound/LADSPAPluginFactory.cpp
+===================================================================
+--- src/sound/LADSPAPluginFactory.cpp
++++ src/sound/LADSPAPluginFactory.cpp	2009-08-16 18:20:15.000000000 +0200
+@@ -565,7 +565,7 @@
+         path = cpath;
+ 
+     if (path == "") {
+-        path = "/usr/local/lib/ladspa:/usr/lib/ladspa";
++        path = "/usr/local/lib/ladspa:/usr/lib/ladspa:/usr/lib64/ladspa";
+         char *home = getenv("HOME");
+         if (home)
+             path = std::string(home) + "/.ladspa:" + path;
+--- src/sound/DSSIPluginFactory.cpp~	2009-08-16 01:02:55.000000000 +0200
++++ src/sound/DSSIPluginFactory.cpp	2009-08-18 07:23:48.000000000 +0200
+@@ -234,7 +234,7 @@
+         path = cpath;
+ 
+     if (path == "") {
+-        path = "/usr/local/lib/dssi:/usr/lib/dssi";
++        path = "/usr/local/lib/dssi:/usr/lib/dssi:/usr/lib64/dssi";
+         char *home = getenv("HOME");
+         if (home)
+             path = std::string(home) + "/.dssi:" + path;

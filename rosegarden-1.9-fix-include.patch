@@ -1,0 +1,13 @@
+Index: src/gui/application/TranzportClient.h
+===================================================================
+--- src/gui/application/TranzportClient.h
++++ src/gui/application/TranzportClient.h       2009-08-16 11:25:52.000000000 +0200
+@@ -22,6 +22,7 @@
+
+ #include "base/Composition.h"
+ #include "misc/Debug.h"
++#include <stdint.h>
+
+ #include <QObject>
+
+
