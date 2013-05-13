@@ -17,14 +17,14 @@ BuildRequires:	dssi-devel
 BuildRequires:	makedepend
 BuildRequires:	fftw3-devel >= 3
 BuildRequires:	python
-BuildRequires:	liblo-devel >= 0.7
-BuildRequires:	libxft-devel
+BuildRequires:	pkgconfig(liblo) >= 0.7
+BuildRequires:	pkgconfig(xft)
 BuildRequires:	libalsa-devel >= 0.9
-BuildRequires:	liblirc-devel
+BuildRequires:	pkgconfig(liblircclient0)
 BuildRequires:	sndfile-devel >= 1.0.16
-BuildRequires:	libsamplerate-devel >= 0.1.2
-BuildRequires:	libsm-devel
-BuildRequires:	libx11-devel
+BuildRequires:	pkgconfig(samplerate) >= 0.1.2
+BuildRequires:	pkgconfig(sm)
+BuildRequires:	pkgconfig(x11)
 # TODO: libz, samplerate, perl, xargs, sha1sum and cut
 
 Requires:	flac
