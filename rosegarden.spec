@@ -1,11 +1,11 @@
 Name:		rosegarden
-Version:		13.06
+Version:		13.10
 Release:		1
 Summary:		Midi, audio and notation editor
 License:		GPLv2+
 Group:		Sound
 URL:		http://www.rosegardenmusic.com/
-Source0:		https://sourceforge.net/projects/rosegarden/files/rosegarden/13.06/%{name}-%{version}.tar.bz2
+Source0:		https://sourceforge.net/projects/rosegarden/files/rosegarden/13.10/%{name}-%{version}.tar.bz2
 BuildRequires:	kdelibs4-devel
 BuildRequires:	jackit-devel
 BuildRequires:	ladspa-devel
@@ -176,5 +176,6 @@ cp -pr \
     - fix buildrequires
     - remove unneeded %%post and %%postun sections
     - import rosegarden4
+
 
 
