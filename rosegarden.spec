@@ -47,6 +47,7 @@ application for Unix and Linux
 %_datadir/applications/%{name}.desktop
 %_datadir/icons/*/*/*/*%{name}*
 %_datadir/mime/*
+%{_datadir}/appdata/rosegarden.appdata.xml
 
 #--------------------------------------------------------------------
 
