@@ -25,6 +25,7 @@ BuildRequires:	sndfile-devel >= 1.0.16
 BuildRequires:	pkgconfig(samplerate) >= 0.1.2
 BuildRequires:	pkgconfig(sm)
 BuildRequires:	pkgconfig(x11)
+BuildRequires:	curl-devel
 # TODO: libz, samplerate, perl, xargs, sha1sum and cut
 
 Requires:	flac
