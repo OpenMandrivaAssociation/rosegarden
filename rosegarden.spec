@@ -1,11 +1,11 @@
 Name:		rosegarden
-Version:		13.10
+Version:		14.02
 Release:		1
 Summary:		Midi, audio and notation editor
 License:		GPLv2+
 Group:		Sound
 URL:		http://www.rosegardenmusic.com/
-Source0:		https://sourceforge.net/projects/rosegarden/files/rosegarden/13.10/%{name}-%{version}.tar.bz2
+Source0:		http://sourceforge.net/projects/rosegarden/files/rosegarden/14.02/%{name}-%{version}.tar.bz2
 BuildRequires:	kdelibs4-devel
 BuildRequires:	jackit-devel
 BuildRequires:	ladspa-devel
@@ -43,11 +43,11 @@ notation editor, and general-purpose music composition and editing
 application for Unix and Linux
 
 %files -n %{name}
-%_bindir/%{name}
+%{_bindir}/%{name}
 %{_datadir}/%{name}
-%_datadir/applications/%{name}.desktop
-%_datadir/icons/*/*/*/*%{name}*
-%_datadir/mime/*
+%{_datadir}/applications/%{name}.desktop
+%{_datadir}/icons/*/*/*/*%{name}*
+%{_datadir}/mime/*
 %{_datadir}/appdata/rosegarden.appdata.xml
 
 #--------------------------------------------------------------------
@@ -63,7 +63,7 @@ export QTDIR=/usr/lib/qt4
 %make
 
 %install
-rm -fr %buildroot
+rm -fr %{buildroot}
 %makeinstall_std
 
 # install some extra files
@@ -178,6 +178,7 @@ cp -pr \
     - fix buildrequires
     - remove unneeded %%post and %%postun sections
     - import rosegarden4
+
 
 
 
