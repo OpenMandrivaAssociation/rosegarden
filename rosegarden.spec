@@ -30,8 +30,6 @@ BuildRequires:	pkgconfig(libcurl)
 
 Requires:	flac
 Requires:	libsndfile-progs
-# For sndfile-resample, see https://bugzilla.novell.com/show_bug.cgi?id=443543
-# - AdamW 2008/12
 Requires:	libsamplerate-progs
 Requires:	xterm
 Suggests:	lilypond >= 2.18.2
