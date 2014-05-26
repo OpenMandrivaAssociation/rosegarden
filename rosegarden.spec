@@ -19,13 +19,13 @@ BuildRequires:	fftw3-devel >= 3
 BuildRequires:	python
 BuildRequires:	pkgconfig(liblo) >= 0.7
 BuildRequires:	pkgconfig(xft)
-BuildRequires:	libalsa-devel >= 0.9
+BuildRequires:  pkgconfig(alsa) >= 0.9
 BuildRequires:	pkgconfig(liblircclient0)
-BuildRequires:	sndfile-devel >= 1.0.16
+BuildRequires:	pkgconfig(sndfile) >= 1.0.16
 BuildRequires:	pkgconfig(samplerate) >= 0.1.2
 BuildRequires:	pkgconfig(sm)
 BuildRequires:	pkgconfig(x11)
-BuildRequires:	curl-devel
+BuildRequires:	pkgconfig(libcurl)
 # TODO: libz, samplerate, perl, xargs, sha1sum and cut
 
 Requires:	flac
