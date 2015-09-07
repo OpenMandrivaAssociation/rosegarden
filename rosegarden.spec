@@ -1,13 +1,13 @@
 Name:		rosegarden
-Version:	14.12
-Release:	2
+Version:	15.08
+Release:	1
 Summary:	Midi, audio and notation editor
 License:	GPLv2+
 Group:		Sound
 URL:		http://www.rosegardenmusic.com/
-Source0:	http://sourceforge.net/projects/rosegarden/files/rosegarden/14.02/%{name}-%{version}.tar.bz2
-BuildRequires:	kdelibs4-devel
+Source0:	http://sourceforge.net/projects/rosegarden/files/rosegarden/%{version}/%{name}-%{version}.tar.bz2
 BuildRequires:	jackit-devel >= 1.9.10
+BuildRequires:	qt4-devel
 BuildRequires:	ladspa-devel
 BuildRequires:	liblrdf-devel >= 0.2
 BuildRequires:	imagemagick
