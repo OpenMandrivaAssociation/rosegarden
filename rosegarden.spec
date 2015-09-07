@@ -1,5 +1,5 @@
 Name:		rosegarden
-Version:	14.12
+Version:	15.08
 Release:	0.1
 Summary:	Midi, audio and notation editor
 License:	GPLv2+
