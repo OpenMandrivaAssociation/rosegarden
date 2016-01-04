@@ -7,6 +7,7 @@ Group:		Sound
 URL:		http://www.rosegardenmusic.com/
 Source0:	http://sourceforge.net/projects/rosegarden/files/rosegarden/%{version}/%{name}-%{version}.1.tar.bz2
 BuildRequires:	jackit-devel >= 1.9.10
+BuildRequires:	cmake
 BuildRequires:	qt4-devel
 BuildRequires:	ladspa-devel
 BuildRequires:	liblrdf-devel >= 0.2
