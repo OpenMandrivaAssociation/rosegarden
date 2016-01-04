@@ -1,11 +1,11 @@
 Name:		rosegarden
-Version:	15.12.1
+Version:	15.12
 Release:	1
 Summary:	Midi, audio and notation editor
 License:	GPLv2+
 Group:		Sound
 URL:		http://www.rosegardenmusic.com/
-Source0:	http://sourceforge.net/projects/rosegarden/files/rosegarden/%{version}/%{name}-%{version}.tar.bz2
+Source0:	http://sourceforge.net/projects/rosegarden/files/rosegarden/%{version}/%{name}-%{version}.1.tar.bz2
 BuildRequires:	jackit-devel >= 1.9.10
 BuildRequires:	qt4-devel
 BuildRequires:	ladspa-devel
@@ -56,15 +56,12 @@ application for Unix and Linux
 %setup -q -n %{name}-%{version}
 
 %build
-#generate configure
-#sh bootstrap.sh
 export QTDIR=/usr/lib/qt4
-%configure
+%cmake
 %make
 
 %install
-rm -fr %{buildroot}
-%makeinstall_std
+%makeinstall_std -C build
 
 # install some extra files
 mkdir -p %{buildroot}%{_datadir}/%{name}
