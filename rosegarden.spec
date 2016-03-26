@@ -1,6 +1,6 @@
 Name:		rosegarden
 Version:	16.02
-Release:	1
+Release:	2
 Summary:	Midi, audio and notation editor
 License:	GPLv2+
 Group:		Sound
