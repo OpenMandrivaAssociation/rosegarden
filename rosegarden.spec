@@ -1,14 +1,19 @@
 Name:		rosegarden
-Version:	16.02
-Release:	2
+Version:	17.12
+Release:	1
 Summary:	Midi, audio and notation editor
 License:	GPLv2+
 Group:		Sound
 URL:		http://www.rosegardenmusic.com/
 Source0:	http://sourceforge.net/projects/rosegarden/files/rosegarden/%{version}/%{name}-%{version}.tar.bz2
 BuildRequires:	jackit-devel >= 1.9.10
-BuildRequires:	cmake
-BuildRequires:	qt4-devel
+BuildRequires:	cmake ninja
+BuildRequires:	cmake(Qt5Core)
+BuildRequires:	cmake(Qt5Gui)
+BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(Qt5Network)
+BuildRequires:	cmake(Qt5Xml)
+BuildRequires:	cmake(Qt5PrintSupport)
 BuildRequires:	ladspa-devel
 BuildRequires:	liblrdf-devel >= 0.2
 BuildRequires:	imagemagick
@@ -46,10 +51,10 @@ application for Unix and Linux
 %files -n %{name}
 %{_bindir}/%{name}
 %{_datadir}/%{name}
-%{_datadir}/applications/%{name}.desktop
+%{_datadir}/applications/com.rosegardenmusic.rosegarden.desktop
 %{_datadir}/icons/*/*/*/*%{name}*
 %{_datadir}/mime/*
-%{_datadir}/appdata/rosegarden.appdata.xml
+%{_datadir}/metainfo/rosegarden.appdata.xml
 
 #--------------------------------------------------------------------
 
@@ -57,12 +62,11 @@ application for Unix and Linux
 %setup -q -n %{name}-%{version}
 
 %build
-export QTDIR=/usr/lib/qt4
-%cmake
-%make
+%cmake_qt5 -G Ninja
+%ninja
 
 %install
-%makeinstall_std -C build
+%ninja_install -C build
 
 # install some extra files
 mkdir -p %{buildroot}%{_datadir}/%{name}
