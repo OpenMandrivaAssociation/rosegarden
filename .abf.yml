@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   rosegarden-17.12.tar.bz2: d82d6ca03c025a6e5df75eb9b08dd87c63d44742
+sources:
+  rosegarden-18.12.tar.bz2: aadec726d8050125c06f86a6bc451aa4e3c12b36

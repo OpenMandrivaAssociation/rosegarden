@@ -1,11 +1,11 @@
 Name:		rosegarden
-Version:	17.12
+Version:	18.12
 Release:	1
 Summary:	Midi, audio and notation editor
 License:	GPLv2+
 Group:		Sound
 URL:		http://www.rosegardenmusic.com/
-Source0:	http://sourceforge.net/projects/rosegarden/files/rosegarden/%{version}/%{name}-%{version}.tar.bz2
+Source0:	http://download.sourceforge.net/rosegarden/%{name}-%{version}.tar.bz2
 BuildRequires:	jackit-devel >= 1.9.10
 BuildRequires:	cmake ninja
 BuildRequires:	cmake(Qt5Core)
