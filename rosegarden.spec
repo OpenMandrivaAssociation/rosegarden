@@ -8,6 +8,7 @@ URL:		http://www.rosegardenmusic.com/
 Source0:	http://sourceforge.net/projects/rosegarden/files/rosegarden/%{version}/%{name}-%{version}.tar.bz2
 BuildRequires:	jackit-devel >= 1.9.10
 BuildRequires:	cmake ninja
+BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt5Core)
 BuildRequires:	cmake(Qt5Gui)
 BuildRequires:	cmake(Qt5Widgets)
