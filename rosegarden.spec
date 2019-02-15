@@ -1,5 +1,5 @@
 Name:		rosegarden
-Version:	17.12
+Version:	18.12
 Release:	1
 Summary:	Midi, audio and notation editor
 License:	GPLv2+
@@ -48,8 +48,9 @@ Rosegarden is an attractive, user-friendly MIDI and audio sequencer,
 notation editor, and general-purpose music composition and editing
 application for Unix and Linux
 
-%files -n %{name}
+%files
 %{_bindir}/%{name}
+%{_libdir}/librosegardenprivate.so
 %{_datadir}/%{name}
 %{_datadir}/applications/com.rosegardenmusic.rosegarden.desktop
 %{_datadir}/icons/*/*/*/*%{name}*
