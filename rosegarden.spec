@@ -18,7 +18,7 @@ BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5PrintSupport)
 BuildRequires:	ladspa-devel
 BuildRequires:	liblrdf-devel >= 0.2
-BuildRequires:	pkgconfig(raptor)
+BuildRequires:	pkgconfig(raptor2)
 BuildRequires:	imagemagick
 BuildRequires:	chrpath
 BuildRequires:	libxml2-utils
