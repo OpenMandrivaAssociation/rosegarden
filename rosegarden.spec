@@ -1,12 +1,12 @@
 Name:		rosegarden
-Version:	20.06
+Version:	20.12
 Release:	1
 Summary:	Midi, audio and notation editor
 License:	GPLv2+
 Group:		Sound
 URL:		http://www.rosegardenmusic.com/
 Source0:	http://sourceforge.net/projects/rosegarden/files/rosegarden/%{version}/%{name}-%{version}.tar.bz2
-Patch0:		rosegarden-20.06-qt-5.15.patch
+#Patch0:		rosegarden-20.06-qt-5.15.patch
 BuildRequires:	jackit-devel >= 1.9.10
 BuildRequires:	cmake ninja
 BuildRequires:	cmake(ECM)
