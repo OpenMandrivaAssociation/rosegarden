@@ -1,0 +1,13 @@
+diff -rupN rosegarden-25.06.old/src/gui/general/ActionData.cpp rosegarden-25.06/src/gui/general/ActionData.cpp
+--- rosegarden-25.06.old/src/gui/general/ActionData.cpp	2025-06-04 06:29:30.000000000 +0200
++++ rosegarden-25.06/src/gui/general/ActionData.cpp	2025-07-12 09:24:55.355860360 +0200
+@@ -760,7 +760,8 @@ void ActionData::fillModel()
+         m_model->setItem(0, 3, item);
+         m_model->item(0, 3)->setEditable(false);
+         if (ainfo.global) {
+-            QVariant bg(QBrush(Qt::cyan));
++			QBrush br(Qt::cyan);
++            QVariant bg(br);
+             for (int col=0; col<8; col++) {
+                 m_model->setData(m_model->index(0, col),
+                                  bg, Qt::BackgroundRole);

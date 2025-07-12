@@ -1,0 +1,12 @@
+# False positive: libsndfile-progs contains utils for the libraries,
+# not the libraries themselves.
+addFilter("E: explicit-lib-dependency")
+
+# The main package contains a private shared library
+# and this confuses rpmlint
+addFilter("E: non-versioned-file-in-library-package")
+addFilter("E: executable-in-library-package")
+addFilter("E: invalid-soname")
+
+# We cannot provide missing manual pages
+addFilter("W: no-manual-page-for-binary")
